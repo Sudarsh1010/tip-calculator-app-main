@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+:root {
+  /* primary */
+  --strong-cyan: hsl(172, 67%, 45%);
+
+  /* Neutral */
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"]:focus {
+  border: 1px solid red;
+}
+
+.main {
+  background: var(--Light-grayish-cyan);
+  display: flex;
+  flex-direction: column;
+}
+
+.main .logo {
+  margin: 2em auto;
+}
+
+.main .calculator {
+  border-top-left-radius: 1.25em;
+  border-top-right-radius: 1.25em;
+  background: var(--White);
+}
+
+.calculator input {
+  text-align: right;
+  background: var(--Very-light-grayish-cyan);
+  border-radius: 0.25rem;
+  padding: 0.25rem 1rem;
+  color: var(--Very-dark-cyan);
+  width: 100%;
+}
+
+.calculator label {
+  color: var(--Dark-grayish-cyan);
+  font-size: 1rem;
+}
+
+.calculator .tip {
+  padding: 1em 1.25em;
+}
+
+.bill input {
+  background-image: url(./images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: 1rem;
+}
+
+.select-tip {
+  margin: 1.5rem 0;
+}
+
+.select-tip .tip-categories {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.tip-categories .tip-percentage {
+  background: var(--Very-dark-cyan);
+  text-align: center;
+
+  color: var(--Very-light-grayish-cyan);
+  transition: 0.2s ease-in-out;
+}
+
+.tip-categories .tip-percentage:hover,
+.active-tip:hover {
+  cursor: pointer;
+  background: #9fe8df;
+  color: var(--Very-dark-cyan);
+}
+
+.tip-categories #tip-btn {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.tip-categories input {
+  overflow: hidden;
+}
+
+.active-tip {
+  text-align: center;
+  transition: 0.2s ease-in-out;
+  font-weight: bolder;
+  background-color: var(--strong-cyan);
+  color: var(--Very-dark-cyan);
+}
+
+.people input {
+  background-image: url(./images/icon-person.svg);
+  background-repeat: no-repeat;
+  background-position: 1rem;
+}
+
+.output {
+  margin: 0.5em 1em;
+  border-radius: 1rem;
+  background: var(--Very-dark-cyan);
+}
+
+.tip-output {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.tip-amount {
+  margin: 1rem 0;
+}
+
+.tip-amount,
+.total-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.output-title .title {
+  color: var(--Light-grayish-cyan);
+  font-size: 1rem;
+}
+
+.output-title .description {
+  color: var(--Grayish-cyan);
+  font-size: 0.75rem;
+}
+
+.output-amount,
+.total-amount {
+  font-size: 2.5rem;
+  color: var(--strong-cyan);
+}
+
+.output .btn-container {
+  padding: 0.5em 1em 1em;
+  display: flex;
+  justify-content: center;
+}
+
+.output .reset-btn {
+  background: var(--strong-cyan);
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1em;
+  color: var(--Very-dark-cyan);
+  border-radius: 0.5rem;
+  transition: 0.2s ease-in-out;
+}
+
+.output .reset-btn:hover {
+  background: #9fe8df;
+}
+
+footer {
+  padding-top: 1rem;
+}
+
+@media only screen and (min-width: 550px) {
+  body {
+    background: var(--Light-grayish-cyan);
+    height: 100vh;
+  }
+
+  .calculator {
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 1.25em;
+  }
+
+  .tip .select-tip .tip-categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .output {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  body {
+    background: var(--Light-grayish-cyan);
+    height: 100vh;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main .logo {
+    margin: 3em auto;
+  }
+
+  .calculator {
+    margin: 1rem auto;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 950px;
+    width: 100%;
+    border-radius: 1.25em;
+  }
+
+  .tip {
+    /* margin: 1rem 0 1rem 1rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .tip .select-tip .tip-categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .output {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .btn-container {
+    justify-content: end;
+  }
+}

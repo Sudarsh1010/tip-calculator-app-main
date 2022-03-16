@@ -7,7 +7,7 @@
   <!-- displays site properly based on user's device -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -25,52 +25,76 @@
 
 <body>
 
-  <main>
-    <div>
-      <div class="bill">
-        <p>Bill</p>
-        <input type="number" placeholder="$" value="0">
-      </div>
+  <main class="main">
 
-      <div class="tip-category">
-        <p>Select Tip %</p>
-        <div class="grid">
+    <div class="logo">
+      <img src="./images/logo.svg" alt="">
+    </div>
 
+    <div class="calculator">
+
+      <!-- Tips -->
+      <div class="tip">
+        <div class="bill">
+          <label for="">Bill</label><br />
+          <input class="bill-input" type="number" value="0" />
+        </div>
+
+        <div class="select-tip">
+          <label for="">Select Tip %</label><br />
+
+          <div class="tip-categories">
+            <div class="tip-percentage tip-btn tip-5" id="tip-btn">5%</div>
+            <div class="tip-percentage tip-btn tip-10" id="tip-btn">10%</div>
+            <div class="tip-btn tip-15 active-tip" id="tip-btn">15%</div>
+            <div class="tip-percentage tip-btn tip-25" id="tip-btn">25%</div>
+            <div class="tip-percentage tip-btn tip-50" id="tip-btn">50%</div>
+            <input class="custom-tip" id="tip-btn" type="number" placeholder="Custom" value="" />
+          </div>
+        </div>
+
+        <div class="people">
+          <label for="">Number of People</label><br />
+          <input class="people-input" type="number" value="0" />
         </div>
       </div>
-    </div>
-    <div>
+
+      <!-- Output -->
+      <div class="output">
+        <div class="tip-output">
+          <div class="tip-amount">
+            <div class="output-title">
+              <p class="title">Tip Amount</p>
+              <p class="description">/ person</p>
+            </div>
+
+            <h1 class="output-amount">$0.0</h1>
+          </div>
+
+          <div class="tip-amount">
+            <div class="output-title">
+              <p class="title">Total</p>
+              <p class="description">/ person</p>
+            </div>
+
+            <h1 class="total-amount">$0.0</h1>
+          </div>
+        </div>
+
+        <div class="btn-container">
+          <button class="reset-btn">RESET</button>
+        </div>
+      </div>
 
     </div>
   </main>
 
-
-
-
-
-
-
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="https://twitter.com/SudharsanJain/" target="_blank">Sudharsan Jain</a>.
+  </footer>
+
+  <script src="./app.js"></script>
 </body>
 
 </html>
