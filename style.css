@@ -16,6 +16,7 @@
   font-family: "Space Mono", monospace;
 }
 body {
+  background: var(--Light-grayish-cyan);
   font-family: "Space Mono", monospace;
   font-size: 24px;
   font-weight: 700;
@@ -23,26 +24,22 @@ body {
   flex-direction: column;
 }
 .main {
-  background: var(--Light-grayish-cyan);
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .main .logo {
   margin: 2em auto;
 }
-.main .calculator {
-  border-top-left-radius: 1.25em;
-  border-top-right-radius: 1.25em;
-  background: var(--White);
-}
+
 .calculator input {
   text-align: right;
   background: var(--Very-light-grayish-cyan);
   border-radius: 0.25rem;
   padding: 0.25rem 1rem;
   color: var(--Very-dark-cyan);
-  max-width: 27.5rem;
-  width: 90%;
+  width: 14.5rem;
   font-size: 24px;
   border: none;
 }
@@ -103,8 +100,7 @@ body {
   font-family: "Space Mono", monospace;
   font-size: 24px;
   border: none;
-  max-width: 11rem;
-  width: 100%;
+  width: 6.75rem;
 }
 .active-tip {
   text-align: center;
@@ -119,7 +115,7 @@ body {
   background-position: 1rem;
 }
 .output {
-  margin: 0.5em 1em;
+  margin: 0.5em 0.75em 0.75em;
   border-radius: 1rem;
   background: var(--Very-dark-cyan);
 }
@@ -174,21 +170,33 @@ footer {
   padding-top: 1rem;
 }
 
+@media only screen and (max-width: 549px) {
+  .main .calculator {
+    border-radius: 1.25rem;
+    background: var(--White);
+    width: 325px;
+  }
+}
+
 @media only screen and (min-width: 550px) {
   body {
     background: var(--Light-grayish-cyan);
     height: 100vh;
   }
 
+  .calculator input {
+    width: 25.5rem;
+  }
+
   .tip-categories input {
-    max-width: 7.75rem;
-    width: 100%;
+    width: 7.75rem;
   }
 
   .calculator {
-    margin: 0 auto;
-    max-width: 500px;
-    width: 100%;
+    border-radius: 1.25rem;
+    background: var(--White);
+    margin: 0;
+    width: 500px;
     border-radius: 1.25em;
   }
   .tip .select-tip .tip-categories {
@@ -227,8 +235,13 @@ footer {
   }
 
   .calculator input {
-    width: 26rem;
+    width: 26.5rem;
   }
+
+  .tip-categories input {
+    width: 8rem;
+  }
+
   .tip {
     /* margin: 1rem 0 1rem 1rem; */
     display: flex;
