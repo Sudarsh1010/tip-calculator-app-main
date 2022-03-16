@@ -6,4 +6,4 @@
 
 Thanks for checking out this front-end coding challenge.
 
-Live Link - 
+Live Link - https://sudarsh1010.github.io/tip-calculator-app-main/
