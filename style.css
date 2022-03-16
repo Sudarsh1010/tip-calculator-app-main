@@ -91,7 +91,7 @@ body {
   background: #9fe8df;
   color: var(--Very-dark-cyan);
 }
-.tip-categories #tip-btn {
+.tip-categories .tip-btn {
   padding: 0.5rem;
   border-radius: 0.25rem;
 }
