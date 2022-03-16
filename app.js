@@ -4,6 +4,7 @@ const outputAmount = document.querySelector('.output-amount');
 const totalAmount = document.querySelector('.total-amount');
 const tips = document.querySelectorAll('.tip-btn')
 const tipCustom = document.querySelector('.custom-tip')
+const error = document.querySelector('.error')
 
 billInput.addEventListener('input', billInputFun);
 peopleInput.addEventListener('input', peopleInputFun);
@@ -29,6 +30,12 @@ function billInputFun() {
 function peopleInputFun() {
   peopleValue = parseFloat(peopleInput.value)
   calculateTip()
+
+  if (peopleValue < 1) {
+    error.innerHTML = `can't be zero`;
+  } else {
+    error.innerHTML = ``;
+  }
 }
 
 function handleClick(e) {
